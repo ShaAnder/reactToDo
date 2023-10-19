@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+Building a react based to do list
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+User stories
 
-## Available Scripts
+1/ I want to be able to add a task to the list. I should be able to add details, a time to complete it if I want to and the option to complete or delete the task
 
-In the project directory, you can run:
+2/ I want to be able to see the task details as i click on them
 
-### `npm start`
+3/ I want to be able to scroll through my tasks for the day and not just work down the list
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4/ I want to be able to sort and search through my tasks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5/ I want to be able to see what tasks I have remaining.
 
-### `npm test`
+6/ I want to be able to clear my current task list
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+IMPLEMENT THE STORIES
 
-### `npm run build`
+1/
+We need a button that allows the user to add a task to the list.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This button should open a small window (modal window?) that contains form fields for the task,
+description, completion time and button submission.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upon submission the user should be then exited from the modal window and the new task should be saved for the user to see
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2/
 
-### `npm run eject`
+When clicking on the task window we should get a popup that should show the details of the task including the name, desc, ect
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+we need to have a scrolling system in our app to continuously scroll through the tasks while hiding the scroll bar
+for #5 we also want to make the header / footer sticky so that they can stay on screen for ui experience
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the form component next to the form button itself we need to implement a select option that allows us to search
+via alphabetical order or by added (later look at by name)
 
-## Learn More
+5/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In the footer we want a dynamic piece of text that details the number of tasks remaining in the current session
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6/
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A clear button to clear all tasks with a popup confirmation to confirm
