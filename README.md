@@ -43,7 +43,7 @@ This app utilizes several features that would typically be found in a list app
 - NodeJS
 
 <p align="center">
-  <img alt="Bill Split React" src="public\image.png" width="50%" />
+  <img alt="React ToDO list" src="public\image.png" width="50%" />
 </p>
 
 ## Installation Guide
