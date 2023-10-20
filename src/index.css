@@ -80,7 +80,9 @@ input {
 
 .add-form button {
   text-transform: uppercase;
-  background-color: #76c7ad;
+  background-color: var(--textcolor1);
+  color: var(--bgcolor1);
+  width: 200px;
 }
 
 .list {
