@@ -15,7 +15,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/maintained-yes-green.svg" />
   </a>
   <a href="https://github.com/ShaAnder/react_todo_list/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+    <img alt="License: GPL3" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 
 </p>
