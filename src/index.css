@@ -46,7 +46,6 @@ h1 {
   font-weight: 400;
   word-spacing: 30px;
   letter-spacing: -5px;
-  padding: 2.4rem 0;
 }
 
 .add-form {
@@ -61,6 +60,10 @@ h1 {
 h3 {
   margin-right: 1.6rem;
   font-size: 2.4rem;
+}
+
+p {
+  background-color: var(--bgcolor2);
 }
 
 button,
@@ -107,10 +110,11 @@ input {
 
 .list ul {
   list-style: none;
-  width: 80%;
+  width: 60%;
+  font-size: xx-large;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   gap: 1.5rem;
   justify-content: center;
   align-content: center;
@@ -121,7 +125,12 @@ input {
   align-items: center;
   gap: 1.5rem;
   height: 6rem;
+  padding-right: 2rem;
   justify-content: center;
+}
+
+.delete-item {
+  padding: 2rem;
 }
 
 input[type="checkbox"] {

@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { Logo } from "./components/Logo";
+import { FormAddTasks } from "./components/FormAddTasks";
+import { TaskList } from "./components/TaskList";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
@@ -6,7 +10,7 @@ export default function App() {
   function handleAddtasks(task) {
     setTasks((tasks) => [...tasks, task]);
     // expected behaviour react only updates the next render
-    console.log(tasks);
+    console.log(tasks, task);
   }
 
   // function to delete an task, creates a new array and only adds tasks with non same id
@@ -18,7 +22,7 @@ export default function App() {
   function handleToggletask(id) {
     setTasks((tasks) =>
       tasks.map((task) =>
-        task.id === id ? { ...task, packed: !task.packed } : task
+        task.id === id ? { ...task, completed: !task.completed } : task
       )
     );
   }
@@ -38,80 +42,16 @@ export default function App() {
         </div>
         <div className="main">
           <FormAddTasks onAddtasks={handleAddtasks} />
-          <TaskList tasks={tasks} />
+          <TaskList
+            tasks={tasks}
+            onDeleteTask={handleDeletetask}
+            onToggleTask={handleToggletask}
+          />
         </div>
         <div className="footer">
-          <Stats />
+          <Footer onClearTask={handleCleartasks} />
         </div>
       </div>
     </div>
   );
-}
-
-function Logo() {
-  return <h1>To Do List</h1>;
-}
-
-function FormAddTasks({ onAddtasks }) {
-  // get our form state
-  const [description, setDescription] = useState("");
-  // create id / key for the task
-  const id = crypto.randomUUID();
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    // if field empty early return
-    if (!description) return;
-
-    // new task variable with our fields
-    const newtask = { description, completed: false, id: id };
-
-    onAddtasks(newtask);
-  }
-
-  return (
-    <form className="add-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Input Task Here"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <button>Add</button>
-    </form>
-  );
-}
-
-function TaskList({ tasks }) {
-  return (
-    <div className="list">
-      <ul>
-        {tasks.map((task) => (
-          <Task task={task} key={task.id} />
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-/**
- * Function for the tasks being created, these are created inside the packing list and the data is passed to them
- * @param {*} task -> task to be made, toggle and delete functions
- * @returns jsx for task rendering
- * @author ShaAnder
- */
-function Task({ task, onDeletetask, onToggletask }) {
-  // jsx with our new task
-  return (
-    <li>
-      <span style={task?.completed ? { textDecoration: "line-through" } : {}}>
-        {task?.description}
-      </span>
-    </li>
-  );
-}
-
-function Stats() {
-  return <footer className="stats">You have X tasks to complete!</footer>;
 }
