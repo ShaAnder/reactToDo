@@ -99,13 +99,13 @@ input {
   align-items: center;
 }
 
-.actions button,
 .list select {
   text-transform: uppercase;
   padding: 0.8rem 2.4rem;
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0.8rem;
+  width: 300px;
 }
 
 .list ul {
@@ -118,6 +118,11 @@ input {
   gap: 1.5rem;
   justify-content: center;
   align-content: center;
+}
+
+.actions {
+  position: absolute;
+  bottom: 74rem;
 }
 
 .list li {
