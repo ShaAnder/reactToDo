@@ -17,6 +17,8 @@ export function FormAddTasks({ onAddtasks }) {
     const newtask = { description, completed: false, id: id };
 
     onAddtasks(newtask);
+
+    setDescription("");
   }
 
   return (
