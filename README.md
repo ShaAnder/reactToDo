@@ -5,7 +5,7 @@
 <h1  align="center">React ToDo</h1>
 
 <p  align="center">
-<img src="https://github.com/ShaAnder/reactToDo/assets/129494996/82decc99-a68c-498c-a1e8-49d684cab91b" alt="project image" height="200px">
+<img src="https://github.com/ShaAnder/react_todo_list/assets/129494996/2cd5359d-8770-43c0-a82b-009d1723d1e0" alt="project image" height="200px">
     
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.0.1-orange.svg?cacheSeconds=2592000" />
